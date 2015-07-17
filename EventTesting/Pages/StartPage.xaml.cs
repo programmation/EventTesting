@@ -10,6 +10,12 @@ namespace EventTesting
         public StartPage()
         {
             InitializeComponent();
+
+            BindingContext = new StartPageModel();
+
+            areaLabel.AreaChanged += (sender, e) => {
+                ((StartPageModel)BindingContext).LabelArea = e.NewArea;
+            };
         }
     }
 }

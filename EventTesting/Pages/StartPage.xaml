@@ -6,8 +6,15 @@
 	x:Class="EventTesting.StartPage"
 	>
 	<ContentPage.Content>
-		<controls:CustomLabel
-			Text="Some long text here...."
-			/>
+		<StackLayout>
+			<controls:CustomLabel
+				x:Name="areaLabel"
+				Text="Some long text here...."
+				BackgroundColor="Gray"
+				/>
+			<Label
+				Text="{Binding LabelArea}"
+				/>
+		</StackLayout>
 	</ContentPage.Content>
 </ContentPage>
